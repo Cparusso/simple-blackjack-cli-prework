@@ -25,28 +25,28 @@ def end_game(card_total)
 end
 
 def initial_round
-  current_card_total = 0
+  card_total = 0
 
-  current_card_total += deal_card
-  current_card_total += deal_card
+  card_total += deal_card
+  card_total += deal_card
 
-  display_card_total(current_card_total)
+  display_card_total(card_total)
 
-  return current_card_total
+  return card_total
 end
 
-def hit?(current_card_total)
+def hit?(card_total)
   prompt_user
   input = get_user_input
 
   if input == "h"
-    current_card_total += deal_card
+    card_total += deal_card
   elsif input != "h" && input != "s"
     invalid_command
     hit?
   end
 
-  current_card_total
+  card_total
 end
 
 def invalid_command
@@ -54,7 +54,7 @@ def invalid_command
 end
 
 def runner
-  current_card_total = 0
+  card_total = 0
   welcome
   initial_round
   prompt_user
