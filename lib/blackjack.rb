@@ -59,7 +59,7 @@ def runner
   initial_round
   prompt_user
 
-  until current_card_total >= 21
+  until card_total >= 21
     hit?(current_card_total)
   end
 
