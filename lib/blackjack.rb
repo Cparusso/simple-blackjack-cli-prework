@@ -54,10 +54,10 @@ def invalid_command
 end
 
 def runner
-  card_total = 0
+  card_total = initial_round
 
   welcome
-  initial_round
+
   prompt_user
   get_user_input
 
