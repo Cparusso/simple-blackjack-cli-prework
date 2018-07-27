@@ -59,9 +59,9 @@ def runner
   initial_round
   prompt_user
 
-  until card_total >= 21
-    hit?(current_card_total)
-  end
+  # until card_total >= 21
+  #   hit?(current_card_total)
+  # end
 
   end_game
 end
